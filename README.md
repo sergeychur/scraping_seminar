@@ -17,5 +17,7 @@
 2. CSS и XPath для QA: чтобы разобраться с локаторами, нужно всего лишь…: https://habr.com/ru/companies/skyeng/articles/588282/.
 3. Документация Beautiful Soup: https://www.crummy.com/software/BeautifulSoup/bs4/doc/.
 4. Документация lxml, раздел про xpath: https://lxml.de/xpathxslt.html.
-5. Документация python пакета concurrent.futures: https://docs.python.org/3/library/concurrent.futures.html.
+5. Документация concurrent.futures: https://docs.python.org/3/library/concurrent.futures.html.
 6. Python Asyncio: The Complete Guide: https://superfastpython.com/python-asyncio/.
+7. Документация requests: https://requests.readthedocs.io/en/latest/.
+8. Документация aiohttp: https://docs.aiohttp.org/en/stable/index.html.
