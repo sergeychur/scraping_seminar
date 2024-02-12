@@ -4,7 +4,7 @@ import time
 
 from runners.async_runner import AsyncRunner
 from runners.multithreaded_runner import MultiThreadedRunner
-from runners.sync_runner import SyncRunner
+from runners.simple_runner import SimpleRunner
 from parsers.css_selector_parser import CssSelectorParser
 from parsers.xpath_parser import XPathParser
 from utils.file_sink import FileSink
@@ -21,7 +21,7 @@ def main():
     parser = CssSelectorParser()
     # parser = XPathParser()
     sink = FileSink('./result.jsonl')
-    runner = SyncRunner(parser, sink, logger, seed_urls)
+    runner = SimpleRunner(parser, sink, logger, seed_urls)
     # runner = MultiThreadedRunner(parser, sink, logger, seed_urls, max_parallel=5)
     start = time.time()
     runner.run()
