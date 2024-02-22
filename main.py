@@ -18,11 +18,11 @@ def main():
     logger = logging.getLogger('Runner')
     # главная - https://books.toscrape.com/index.html
     seed_urls = ['https://books.toscrape.com/catalogue/category/books/fantasy_19/index.html']
-    parser = CssSelectorParser()
-    # parser = XPathParser()
+    # parser = CssSelectorParser()
+    parser = XPathParser()
     sink = FileSink('./result.jsonl')
-    runner = SimpleRunner(parser, sink, logger, seed_urls)
-    # runner = MultiThreadedRunner(parser, sink, logger, seed_urls, max_parallel=5)
+    # runner = SimpleRunner(parser, sink, logger, seed_urls)
+    runner = MultiThreadedRunner(parser, sink, logger, seed_urls, max_parallel=5)
     start = time.time()
     runner.run()
     logger.info(f'Total duration is {time.time() - start}')

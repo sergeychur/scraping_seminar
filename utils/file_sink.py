@@ -5,7 +5,7 @@ class FileSink:
         self._file = open(path, 'w')
 
     def write(self, item):
-        self._file.write(json.dumps(item) + '\n')
+        self._file.write(json.dumps(item, ensure_ascii=False) + '\n')
 
     def __del__(self):
         self._file.close()
